@@ -4,6 +4,6 @@ const sensorController = require('../controllers/sensorController');
 
 router.get('/', sensorController.getData);
 
-router.post('/post', sensorController.createData)
+// router.post('/post', sensorController.createData)
 
 module.exports = router;
