@@ -20,9 +20,17 @@ const pool = new Pool({
 //       res.status(500).json({ error: err.message });
 //     }
 //   };
-  exports.getData = async (req, res) => {
+  exports.getRef1 = async (req, res) => {
     try {
-      const result = await pool.query('SELECT * FROM data');
+      const result = await pool.query('SELECT * FROM frost1');
+      res.status(200).json(result.rows);
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  };
+  exports.getRef2 = async (req, res) => {
+    try {
+      const result = await pool.query('SELECT * FROM frost2');
       res.status(200).json(result.rows);
     } catch (err) {
       res.status(500).json({ error: err.message });

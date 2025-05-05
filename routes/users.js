@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const sensorController = require('../controllers/sensorController');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/ref2', sensorController.getRef2);
+
 
 module.exports = router;
